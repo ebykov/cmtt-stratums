@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CMTT stratums</title>
+  <meta charset="utf-8">
+  <meta name="referrer" content="always">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700&amp;subset=cyrillic-ext">
+  <link rel="stylesheet" href="https://s38736.cdn.ngenix.net/static/build/vc.ru/all.min.css?9a6ff7a9">
+</head>
+<body>
+
+<style>
+  .stratums {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .stratums > div {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+  }
+
+  .stratums > div > a {
+    position: relative !important;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+  }
+</style>
+
+<div class="stratums">
+  <div>
+    <a href="%banner.reference_user25%" target="blank" id="iidf-stratum" class="iidf-stratum"></a>
+    <style>
+      .iidf-stratum {
+        display: none;
+        position: fixed;
+        z-index: 100;
+        bottom: 50px;
+        right: 100px;
+        width: 120px;
+        height: 120px;
+        background-color: transparent;
+        background-position: 0 0;
+        background-size: auto 120px;
+        overflow: hidden;
+      }
+    </style>
+    <script>
+      (function (d, w) {
+        var stratum = d.querySelector('#iidf-stratum');
+        var img = d.createElement('img');
+        var imgPath = 'https://leonardo.osnova.io/863a7f20-78ff-692b-1605-e87dae3cd988/';
+        var timer = void 0;
+        var width = 120;
+        var offset = 0;
+        var count = 0;
+        var startCount = 46;
+        var maxCount = 199;
+        var delay = 40;
+
+        img.onload = function () {
+          stratum.style.display = 'block';
+          stratum.style.backgroundImage = 'url(' + imgPath + ')';
+          fn();
+        };
+
+        img.src = imgPath;
+
+        var fn = function fn() {
+          offset = width * count;
+          stratum.style.backgroundPosition = '-' + offset + 'px 0';
+
+          if (count === maxCount) {
+            count = startCount;
+          } else {
+            count++;
+          }
+          timer = setTimeout(fn, delay);
+        };
+
+      })(document, window);
+    </script>
+  </div>
+
+  <div>
+    <a href="href="%banner.reference_user25%"" target="blank" id="pixonic-stratum" class="pixonic-stratum"></a>
+    <style>
+      .pixonic-stratum {
+          display: none;
+          position: fixed;
+          z-index: 100;
+          bottom: 50px;
+          right: 100px;
+          width: 126px;
+          height: 144px;
+          background-color: transparent;
+          background-position: 0 0;
+          background-size: 10793px 144px;
+          overflow: hidden;
+        }
+    </style>
+    <script>
+      (function (d, w) {
+        var stratum = d.querySelector('#pixonic-stratum');
+        var img = d.createElement('img');
+        var imgPath = 'https://leonardo.osnova.io/62f5b3df-6ad9-23c8-b734-0d8ad675a1aa/';
+        var link = 'https://vc.ru/pixonic/55673';
+        var timer = void 0;
+        var offset = 0;
+        var minOffset = 0;
+        var maxOffset = 3012;
+        var delay = 60;
+        var isClicked = false;
+        var animate = true;
+
+        img.onload = function () {
+          stratum.style.display = 'block';
+          stratum.style.backgroundImage = 'url(' + imgPath + ')';
+          fn();
+        };
+
+        img.src = imgPath;
+
+        var fn = function fn() {
+          stratum.style.backgroundPosition = '-' + offset + 'px 0';
+          offset += 125.5;
+
+          if (offset >= maxOffset) {
+            offset = 0;
+            if (isClicked) {
+              animate = false;
+              location.href = link;
+            }
+          }
+
+          if (animate) {
+            timer = setTimeout(fn, delay);
+          }
+        };
+
+        stratum.addEventListener('click', function (e) {
+          if (e.isTrusted) {
+            e.preventDefault();
+            maxOffset = 10793;
+            isClicked = true;
+          }
+        });
+
+      })(document, window);
+    </script>
+  </div>
+
+  <div>
+    <a href="href="%banner.reference_user25%"" target="blank" id="tele2-stratum" class="tele2-stratum"></a>
+    <style>
+      .tele2-stratum {
+        position: fixed;
+        z-index: 100;
+        bottom: 50px;
+        right: 100px;
+        display: block;
+        width: 110px;
+        height: 160px;
+        background-color: transparent;
+        background-image: url("https://leonardo.osnova.io/f0bca8b0-c5d5-568b-d950-896f36b1b805/");
+        background-position: 0 0;
+        background-size: auto 100%;
+        overflow: hidden;
+        transition: opacity 0.2s;
+      }
+    </style>
+    <script>
+      (function (d, w) {
+        var stratum = d.querySelector('#tele2-stratum');
+        var timer = void 0;
+        var offset = 0;
+        var minOffset = 0;
+        var maxOffset = 990;
+        var delay = 60;
+        var isClick = false;
+
+        var fn = function fn() {
+          stratum.style.backgroundPosition = '-' + offset + 'px 0';
+          offset += 110;
+
+          if (offset >= 990) {
+            offset = 0;
+          }
+
+          timer = setTimeout(fn, delay);
+        };
+
+        fn();
+      })(document, window);
+    </script>
+  </div>
+
+  <div>
+    <a href="%banner.reference_user25%" id="avito-stratum" class="avito-stratum" style="opacity: 0;"></a>
+    <style>
+      .avito-stratum {
+        position: fixed;
+        z-index: 100;
+        bottom: 50px;
+        right: 100px;
+        display: block;
+        width: 120px;
+        height: 120px;
+        border-radius: 100%;
+        background-color: #0af;
+        box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
+        overflow: hidden;
+        transition: opacity 0.2s;
+      }
+      .avito-stratum > img {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: auto;
+        height: 100%;
+        max-width: none !important;
+      }
+    </style>
+    <script>
+      (function (d, w) {
+        var stratum = d.querySelector('#avito-stratum');
+        var img = d.createElement('img');
+        var timer = void 0;
+        var offset = 0;
+        var delay = 60;
+
+        img.onload = function () {
+          stratum.style.opacity = 1;
+          stratum.appendChild(img);
+          fn();
+        };
+
+        img.src = 'https://leonardo.osnova.io/517f9c32-5a70-f248-92ab-a4b8199b3699/';
+
+        var fn = function fn() {
+          img.style.transform = 'translate3d(-' + offset + 'px, 0, 0)';
+          offset += 120;
+
+          if (offset >= 15000) {
+            offset = 0;
+            delay = 1000;
+          } else {
+            delay = 60;
+          }
+
+          timer = setTimeout(fn, delay);
+        };
+      })(document, window);
+    </script>
+  </div>
+
+  <div>
+    <a href="%banner.reference_user25%" class="tele2-stratum js-tele2-stratum">
+      <div class="tele2-stratum__water js-tele2-stratum-water">
+        <svg viewBox="0 0 560 20" class="tele2-stratum__water-wave tele2-stratum__water-wave--back">
+          <path d="M420,20c21.5-0.4,38.8-2.5,51.1-4.5c13.4-2.2,26.5-5.2,27.3-5.4C514,6.5,518,4.7,528.5,2.7c7.1-1.3,17.9-2.8,31.5-2.7c0,0,0,0,0,0v20H420z"></path>
+        <path d="M420,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C326,6.5,322,4.7,311.5,2.7C304.3,1.4,293.6-0.1,280,0c0,0,0,0,0,0v20H420z"></path>
+        <path d="M140,20c21.5-0.4,38.8-2.5,51.1-4.5c13.4-2.2,26.5-5.2,27.3-5.4C234,6.5,238,4.7,248.5,2.7c7.1-1.3,17.9-2.8,31.5-2.7c0,0,0,0,0,0v20H140z"></path>
+        <path d="M140,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C46,6.5,42,4.7,31.5,2.7C24.3,1.4,13.6-0.1,0,0c0,0,0,0,0,0l0,20H140z"></path>
+        </svg>
+        <svg viewBox="0 0 560 20" class="tele2-stratum__water-wave tele2-stratum__water-wave--front">
+          <path d="M420,20c21.5-0.4,38.8-2.5,51.1-4.5c13.4-2.2,26.5-5.2,27.3-5.4C514,6.5,518,4.7,528.5,2.7c7.1-1.3,17.9-2.8,31.5-2.7c0,0,0,0,0,0v20H420z"></path>
+        <path d="M420,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C326,6.5,322,4.7,311.5,2.7C304.3,1.4,293.6-0.1,280,0c0,0,0,0,0,0v20H420z"></path>
+        <path d="M140,20c21.5-0.4,38.8-2.5,51.1-4.5c13.4-2.2,26.5-5.2,27.3-5.4C234,6.5,238,4.7,248.5,2.7c7.1-1.3,17.9-2.8,31.5-2.7c0,0,0,0,0,0v20H140z"></path>
+        <path d="M140,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C46,6.5,42,4.7,31.5,2.7C24.3,1.4,13.6-0.1,0,0c0,0,0,0,0,0l0,20H140z"></path>
+        </svg>
+      </div>
+    </a>
+    <style>
+      .tele2-stratum {
+        position: fixed;
+        z-index: 100;
+        bottom: 50px;
+        right: 100px;
+        display: block;
+        height: 100px;
+        width: 100px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        line-height: normal;
+        -webkit-text-size-adjust: 100%;
+           -moz-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+                text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
+        background: #1f2229;
+        border-radius: 100%;
+        overflow: hidden;
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+      }
+      .tele2-stratum.is-animate {
+        -webkit-animation: tele2-bounce 4s 0s linear;
+                animation: tele2-bounce 4s 0s linear;
+      }
+      .tele2-stratum__icon {
+        position: absolute;
+        z-index: 3;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 50%;
+        height: 50%;
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+      }
+      .tele2-stratum__icon > svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      .tele2-stratum__percent {
+        position: absolute;
+        z-index: 3;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        font-size: 18px;
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+      }
+      .tele2-stratum__water {
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transform: translate3d(0, 100%, 0);
+                transform: translate3d(0, 100%, 0);
+        background: #d24b91;
+        transition: all 0.3s;
+      }
+      .tele2-stratum__water-wave {
+        width: 200%;
+        position: absolute;
+        bottom: 100%;
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+      }
+      .tele2-stratum__water-wave--back {
+        right: 0;
+        margin-bottom: -1px;
+        fill: #00b9ff;
+        -webkit-animation: tele2-wave-back 1.4s infinite linear;
+                animation: tele2-wave-back 1.4s infinite linear;
+      }
+      .tele2-stratum__water-wave--front {
+        left: 0;
+        margin-bottom: -2px;
+        fill: #d24b91;
+        -webkit-animation: tele2-wave-front 0.7s infinite linear;
+                animation: tele2-wave-front 0.7s infinite linear;
+      }
+      @-webkit-keyframes tele2-wave-front {
+        100% {
+          -webkit-transform: translate(-50%, 0);
+                  transform: translate(-50%, 0);
+        }
+      }
+      @keyframes tele2-wave-front {
+        100% {
+          -webkit-transform: translate(-50%, 0);
+                  transform: translate(-50%, 0);
+        }
+      }
+      @-webkit-keyframes tele2-wave-back {
+        100% {
+          -webkit-transform: translate(50%, 0);
+                  transform: translate(50%, 0);
+        }
+      }
+      @keyframes tele2-wave-back {
+        100% {
+          -webkit-transform: translate(50%, 0);
+                  transform: translate(50%, 0);
+        }
+      }
+      @-webkit-keyframes tele2-bounce {
+        4%, 12%, 20% {
+          -webkit-transform: translate3d(0, -10px, 0);
+                  transform: translate3d(0, -10px, 0);
+        }
+        8%, 16%, 24%, 28%, 32% {
+          -webkit-transform: translate3d(0, 0, 0);
+                  transform: translate3d(0, 0, 0);
+        }
+        26%, 30% {
+          -webkit-transform: translate3d(0, -5px, 0);
+                  transform: translate3d(0, -5px, 0);
+        }
+      }
+      @keyframes tele2-bounce {
+        4%, 12%, 20% {
+          -webkit-transform: translate3d(0, -10px, 0);
+                  transform: translate3d(0, -10px, 0);
+        }
+        8%, 16%, 24%, 28%, 32% {
+          -webkit-transform: translate3d(0, 0, 0);
+                  transform: translate3d(0, 0, 0);
+        }
+        26%, 30% {
+          -webkit-transform: translate3d(0, -5px, 0);
+                  transform: translate3d(0, -5px, 0);
+        }
+      }
+    </style>
+    <script>
+      (function (d, w) {
+        var container = d.querySelector('.js-tele2-stratum');
+        var water = container.querySelector('.js-tele2-stratum-water');
+        var n = 0;
+        var interval = void 0;
+
+        var percent = d.createElement('div');
+        percent.classList.add('tele2-stratum__percent');
+        percent.innerHTML = '0%';
+
+        var icon = d.createElement('div');
+        icon.classList.add('tele2-stratum__icon');
+        icon.innerHTML = '<svg viewBox="0 0 50 50"><path d="M42.68 7.32A25.003 25.003 0 0 0 7.32 42.68 25.003 25.003 0 1 0 42.68 7.32zM25 47.07A22.07 22.07 0 1 1 47.07 25 22.1 22.1 0 0 1 25 47.07z" fill="#fff"/><path d="M34.87 17L21.94 29.91l-6.81-6.81a1.464 1.464 0 0 0-2.07 2.07L20.9 33a1.46 1.46 0 0 0 2.1 0l14-14a1.46 1.46 0 1 0-2.13-2z" fill="#fff"/></svg>';
+
+        container.appendChild(percent);
+
+        var fn = function fn() {
+          interval = setInterval(function () {
+            n++;
+            percent.innerHTML = n + '%';
+            water.style.transform = 'translate3d(0,' + (100 - n) + '%,0)';
+
+            if (n === 100) {
+              clearInterval(interval);
+              container.replaceChild(icon, percent);
+              container.classList.add('is-animate');
+
+              setTimeout(function () {
+                n = 0;
+                percent.innerHTML = '0%';
+                water.style.transform = 'translate3d(0,' + 100 + '%,0)';
+                container.replaceChild(percent, icon);
+                container.classList.remove('is-animate');
+
+                fn();
+              }, 4000);
+            }
+          }, 60);
+        };
+
+        fn();
+      })(document, window);
+    </script>
+  </div>
+
+  <div>
+    <a href="%banner.reference_user25%" id="stratum-mastercard" class="stratum-mastercard"></a>
+    <style>
+      .stratum-mastercard {
+        position: fixed;
+        z-index: 100;
+        bottom: 50px;
+        right: 100px;
+        display: block;
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        background-color: #141414;
+        background-image: url("https://leonardo.osnova.io/70442a2e-5ec6-04de-79ee-46d390b31bb5/");
+        background-position: 0 0;
+        background-size: cover;
+        box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
+      }
+    </style>
+    <script>
+      (function (d, w) {
+        var stratum = d.getElementById("stratum-mastercard"),
+        timer = void 0,
+        offset = 0,
+        delay = 200,
+        counter = 0;
+
+        function fn() {
+          stratum.style.backgroundPosition = "-" + offset + "px 0";
+          offset += 100;
+
+          counter++;
+          if (counter === 77) {
+            counter = 0;
+            delay = 5000;
+          } else {
+            delay = 200;
+          }
+          timer = setTimeout(fn, delay);
+        }
+
+        fn();
+      })(document, window);
+    </script>
+  </div>
+
+  <div>
+    <a href="https://vc.ru" target="_blank" id="stratum-klavogonki" class="stratum-klavogonki hidden">
+      <div class="stratum-klavogonki__circle js-kg-circle"></div>
+      <img src="https://leonardo.osnova.io/053c94e4-a430-7e3a-b070-0d62640b1fc4/" alt="" class="stratum-klavogonki__hovercraft js-kg-hovercraft">
+    </a>
+    <style>
+      .stratum-klavogonki {
+        position: fixed;
+        z-index: 100;
+        bottom: 40px;
+        left: calc((100% - 980px) / 2 - 20px);
+        display: block;
+        width: 108px;
+        height: 108px;
+      }
+      @media (min-width: 1100px) {
+        .stratum-klavogonki {
+          left: calc((100% - 980px) / 2 - 54px);
+        }
+      }
+      @media (min-width: 1440px) {
+        .stratum-klavogonki {
+          left: calc((100% - 1280px) / 2 - 54px);
+        }
+      }
+      @media (min-width: 1920px) {
+        .stratum-klavogonki {
+          left: calc((100% - 1280px) / 2 - 208px);
+        }
+      }
+      .stratum-klavogonki.hidden {
+        animation-name: stratumBounceInUp;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+      }
+      .stratum-klavogonki.animated {
+        animation-name: stratumAttention;
+        animation-duration: 1s;
+      }
+      .stratum-klavogonki__circle {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #67b0e9;
+        border-radius: 100%;
+        transition: opacity 0.2s, transform 0.2s;
+      }
+      .stratum-klavogonki__hovercraft {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto 0;
+        width: 229px;
+        height: 38px;
+        max-width: none !important;
+        transform: translate3d(-110px, 0, 0);
+      }
+      @-moz-keyframes stratumBounceInUp {
+        from, 60%, 75%, 90%, to {
+          animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+        from {
+          opacity: 0;
+          transform: translate3d(0, 3000px, 0);
+        }
+        60% {
+          opacity: 1;
+          transform: translate3d(0, -20px, 0);
+        }
+        75% {
+          transform: translate3d(0, 10px, 0);
+        }
+        90% {
+          transform: translate3d(0, -5px, 0);
+        }
+        to {
+          transform: translate3d(0, 0, 0);
+        }
+      }
+      @-webkit-keyframes stratumBounceInUp {
+        from, 60%, 75%, 90%, to {
+          animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+        from {
+          opacity: 0;
+          transform: translate3d(0, 3000px, 0);
+        }
+        60% {
+          opacity: 1;
+          transform: translate3d(0, -20px, 0);
+        }
+        75% {
+          transform: translate3d(0, 10px, 0);
+        }
+        90% {
+          transform: translate3d(0, -5px, 0);
+        }
+        to {
+          transform: translate3d(0, 0, 0);
+        }
+      }
+      @-o-keyframes stratumBounceInUp {
+        from, 60%, 75%, 90%, to {
+          animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+        from {
+          opacity: 0;
+          transform: translate3d(0, 3000px, 0);
+        }
+        60% {
+          opacity: 1;
+          transform: translate3d(0, -20px, 0);
+        }
+        75% {
+          transform: translate3d(0, 10px, 0);
+        }
+        90% {
+          transform: translate3d(0, -5px, 0);
+        }
+        to {
+          transform: translate3d(0, 0, 0);
+        }
+      }
+      @keyframes stratumBounceInUp {
+        from, 60%, 75%, 90%, to {
+          animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+        from {
+          opacity: 0;
+          transform: translate3d(0, 3000px, 0);
+        }
+        60% {
+          opacity: 1;
+          transform: translate3d(0, -20px, 0);
+        }
+        75% {
+          transform: translate3d(0, 10px, 0);
+        }
+        90% {
+          transform: translate3d(0, -5px, 0);
+        }
+        to {
+          transform: translate3d(0, 0, 0);
+        }
+      }
+      @-moz-keyframes stratumAttention {
+        from {
+          transform: translate3d(0, 0, 0);
+        }
+        15% {
+          transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+        }
+        30% {
+          transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+        }
+        45% {
+          transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+        }
+        60% {
+          transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+        }
+        75% {
+          transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+        }
+        to {
+          transform: translate3d(0, 0, 0);
+        }
+      }
+      @-webkit-keyframes stratumAttention {
+        from {
+          transform: translate3d(0, 0, 0);
+        }
+        15% {
+          transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+        }
+        30% {
+          transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+        }
+        45% {
+          transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+        }
+        60% {
+          transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+        }
+        75% {
+          transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+        }
+        to {
+          transform: translate3d(0, 0, 0);
+        }
+      }
+      @-o-keyframes stratumAttention {
+        from {
+          transform: translate3d(0, 0, 0);
+        }
+        15% {
+          transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+        }
+        30% {
+          transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+        }
+        45% {
+          transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+        }
+        60% {
+          transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+        }
+        75% {
+          transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+        }
+        to {
+          transform: translate3d(0, 0, 0);
+        }
+      }
+      @keyframes stratumAttention {
+        from {
+          transform: translate3d(0, 0, 0);
+        }
+        15% {
+          transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+        }
+        30% {
+          transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+        }
+        45% {
+          transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+        }
+        60% {
+          transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+        }
+        75% {
+          transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+        }
+        to {
+          transform: translate3d(0, 0, 0);
+        }
+      }
+    </style>
+    <script>
+      (function (d, w) {
+        var stratum = d.getElementById('stratum-klavogonki');
+        var circle = stratum.querySelector('.js-kg-circle');
+        var hovercraft = stratum.querySelector('.js-kg-hovercraft');
+        var timerAnimId = null;
+        var timerClickId = null;
+        var isAllowed = false;
+
+        setTimeout(function () {
+          stratum.classList.remove('hidden');
+        }, 1000);
+
+        timerAnimId = setInterval(function () {
+          stratum.classList.add('animated');
+
+          setTimeout(function () {
+            stratum.classList.remove('animated');
+          }, 1000);
+        }, 15000);
+
+        var leggo = function leggo(x) {
+          hovercraft.style.transform = 'translate3d(' + x + 'px, 0, 0)';
+          if (x < w.innerWidth) {
+            setTimeout(function () {
+              leggo(x + 10);
+            }, 1000 / 60);
+          } else {
+            setTimeout(function () {
+              w.location.href = stratum.href;
+            }, 100);
+          }
+        };
+
+        stratum.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+
+          clearInterval(timerAnimId);
+          circle.style.opacity = 0;
+          circle.style.transform = 'scale(0)';
+          leggo(-110);
+        }, { once: true });
+      })(document, window);
+    </script>
+  </div>
+
+  <div>
+    <a href="%banner.reference_user25%" id="stratum" class="stratum-samsung"></a>
+    <style>
+      .stratum-samsung {
+        position: fixed;
+        z-index: 100;
+        bottom: 50px;
+        right: 100px;
+        display: block;
+        width: 120px;
+        height: 120px;
+        border-radius: 100%;
+        background-color: #1d2f69;
+        background-image: url("https://leonardo.osnova.io/a5c0d337-41c9-94b6-958d-615735bdabd3/");
+        background-position: 0 0;
+        background-size: cover;
+        box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
+      }
+    </style>
+    <script>
+      (function (d, w) {
+        var stratum = d.getElementById("stratum"),
+        timer = void 0,
+        offset = 0,
+        delay = 200;
+
+        function fn() {
+          stratum.style.backgroundPosition = "-" + offset + "px 0";
+          offset = offset >= 480 ? 0 : offset + 120;
+
+          timer = setTimeout(fn, delay);
+        }
+
+        fn();
+      })(document, window);
+    </script>
+  </div>
+
+  <div>
+    <a href="%banner.reference_user25%" id="stratum-raiff" class="stratum-raiff"></a>
+    <style>
+      .stratum-raiff {
+        position: fixed;
+        z-index: 100;
+        bottom: 50px;
+        right: 100px;
+        display: block;
+        width: 120px;
+        height: 120px;
+        border-radius: 100%;
+        background-color: #f3e737;
+        background-image: url("https://leonardo.osnova.io/1cefc44c-f377-8aff-2b94-0951967c5d6e/");
+        background-position: 0 0;
+        background-size: cover;
+        box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
+        -webkit-transform: scale(0);
+                transform: scale(0);
+        transition: -webkit-transform 1s;
+        transition: transform 1s;
+        transition: transform 1s, -webkit-transform 1s;
+      }
+      .stratum-raiff.is-loaded {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+      }
+    </style>
+    <script>
+      (function (d, w) {
+        var stratum = d.getElementById('stratum-raiff'),
+        timer = void 0,
+        offset = 0,
+        delay = 500;
+
+        timer = setTimeout(function () {
+          stratum.classList.add('is-loaded');
+          timer = setTimeout(next, 1000);
+        }, 1000);
+
+        function next() {
+          stratum.style.backgroundPosition = '-' + offset + 'px 0';
+
+          if (offset < 1440) {
+            offset += 120;
+            delay = 500;
+          } else {
+            offset = 0;
+            delay = 4000;
+          }
+
+          timer = setTimeout(next, delay);
+        }
+      })(document, window);
+    </script>
+  </div>
+
+</div>
+
+</body>
+</html>
